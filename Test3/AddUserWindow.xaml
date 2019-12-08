@@ -1,0 +1,21 @@
+﻿<Window x:Class="Test3.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test3"
+        mc:Ignorable="d"
+        Title="AddUserWindow" Height="350" Width="450">
+    
+        <StackPanel>
+            <TextBlock Text="User Name" Style="{StaticResource textBlocks}" Margin="20,20,0,10"/>
+            <TextBox x:Name="txtNewUserName" Style="{StaticResource TextBoxes}" Margin="20,0,20,5" />
+            <TextBlock Text="User Password" Style="{StaticResource textBlocks}" Margin="20,5,0,10"/>
+            <TextBox x:Name="txtNewUserPassword" Style="{StaticResource TextBoxes}" Margin="20,0,20,10" />
+            <!-- confirm the pass word-->
+        <TextBlock Text="Confirm Password" Style="{StaticResource textBlocks}" Margin="20,5,0,10"/>
+        <TextBox x:Name="txtConfirmPassword" Style="{StaticResource TextBoxes}" Margin="20,0,20,10" />
+        <Button x:Name="btnAddNewUser" Content="Add user" Style="{StaticResource myButtons}" Margin="20" Click="btnAddNewUser_Click" />
+        </StackPanel>
+    
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="Test3.UserUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test3"
+        mc:Ignorable="d"
+        Title="UserUpdateWindow" Height="500" Width="450">
+    
+        <StackPanel>
+        <TextBlock x:Name="txtBlockID" Text="ID : " Margin="20,20,0,10" Style="{StaticResource textBlocks}"/>
+        <TextBlock x:Name="txtBlockAccountID" Text="Account ID : " Margin="20,20,0,10" Style="{StaticResource textBlocks}"/>
+        <TextBlock Text="New Name" Style="{StaticResource textBlocks}" Margin="20,20,0,10"/>
+            <TextBox x:Name="txtUpdateName" Style="{StaticResource TextBoxes}" Margin="20,0,20,5" />
+            <TextBlock Text="New Password" Style="{StaticResource textBlocks}" Margin="20,5,0,10"/>
+            <TextBox x:Name="txtUpdatedPassword" Style="{StaticResource TextBoxes}" Margin="20,0,20,10" />
+            <!-- confirm the password-->
+            <TextBlock Text="Confirm Password" Style="{StaticResource textBlocks}" Margin="20,5,0,10"/>
+            <TextBox x:Name="txtConfirmUpdatedPassword" Style="{StaticResource TextBoxes}" Margin="20,0,20,10" />
+            <Button x:Name="btnUpdate" Content="Update user" Style="{StaticResource myButtons}" Margin="20" Click="btnUpdate_Click" />
+        </StackPanel>
+
+    
+</Window>
