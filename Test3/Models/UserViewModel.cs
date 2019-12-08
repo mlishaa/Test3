@@ -63,8 +63,7 @@ namespace Test3.Models
         }
 
         public void AddBalance(User sessionedUser, double amount)
-        {       
-           
+        {                  
                 Account UserAddedbalance = (from u in context.Users
                                          where u.ID == sessionedUser.ID
                                          select u.Account).SingleOrDefault();

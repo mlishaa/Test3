@@ -26,7 +26,7 @@ namespace Test3.Models
 
         public override string ToString()
         {
-            return string.Format("{0,-12}  #{1,-10} {2,-4} {3,-10} {4,-10}",
+            return string.Format("{0,-12}  #{1,-4} |{2,-1}| {3,-10} {4,-10}",
                 TransTime.ToString("yy-MM-dd")+TransTime.ToString("[hh:mm tt]"),
                 UserAccountID, KindOfTrans, Before, After);
         }
