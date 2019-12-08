@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace Test3.Models
   public  class UserViewModel
     {
         private UserDbContext context = new UserDbContext();
+        private string fileName="Transaction.txt";
 
         public User CheckExistingUser(int id,string passWord)
         {
@@ -61,14 +63,17 @@ namespace Test3.Models
         }
 
         public void AddBalance(User sessionedUser, double amount)
-        {
+        {       
            
                 Account UserAddedbalance = (from u in context.Users
                                          where u.ID == sessionedUser.ID
                                          select u.Account).SingleOrDefault();
                 UserAddedbalance.Balance += amount;
-                context.SaveChanges();
            
+                context.SaveChanges();
+            WriteLog(new Transaction(DateTime.Now, sessionedUser.Account.AccountID, 'D',
+               sessionedUser.Account.Balance, UserAddedbalance.Balance));
+
         }
 
         public User GetUserByID(int id)
@@ -92,8 +97,30 @@ namespace Test3.Models
                                         where u.ID == sessionedUser.ID
                                         select u.Account).SingleOrDefault();
             UserAddedbalance.Balance -= amount;
-            context.SaveChanges();
 
+            
+            context.SaveChanges();
+            WriteLog(new Transaction(DateTime.Now, sessionedUser.Account.AccountID, 'W',
+               sessionedUser.Account.Balance, UserAddedbalance.Balance));
+
+        }
+
+
+        public void WriteLog(Transaction transaction)
+        {
+            try
+            {
+
+                using(StreamWriter sw =new StreamWriter(fileName,true))
+                {
+                    sw.WriteLine(transaction.ToString());
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
         }
 
 

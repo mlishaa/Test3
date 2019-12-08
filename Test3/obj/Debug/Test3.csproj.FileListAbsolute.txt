@@ -27,3 +27,5 @@ C:\Users\mac\source\repos\Test3\Test3\obj\Debug\AddUserWindow.g.cs
 C:\Users\mac\source\repos\Test3\Test3\obj\Debug\AddUserWindow.baml
 C:\Users\mac\source\repos\Test3\Test3\obj\Debug\UserUpdateWindow.g.cs
 C:\Users\mac\source\repos\Test3\Test3\obj\Debug\UserUpdateWindow.baml
+C:\Users\mac\source\repos\Test3\Test3\bin\Debug\NLog.dll
+C:\Users\mac\source\repos\Test3\Test3\bin\Debug\NLog.xml
