@@ -76,6 +76,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Migrations\201912090017538_MySecond.cs" />
+    <Compile Include="Migrations\201912090017538_MySecond.designer.cs">
+      <DependentUpon>201912090017538_MySecond.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="UserUpdateWindow.xaml.cs">
       <DependentUpon>UserUpdateWindow.xaml</DependentUpon>
@@ -143,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201912070446072_IntialMigration.resx">
       <DependentUpon>201912070446072_IntialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912090017538_MySecond.resx">
+      <DependentUpon>201912090017538_MySecond.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
