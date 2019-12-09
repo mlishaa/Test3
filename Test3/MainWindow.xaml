@@ -19,8 +19,12 @@
             <RowDefinition Height="auto"/>
             
         </Grid.RowDefinitions>
-        <TextBlock x:Name="txtBlockUserName" Text="Name : " Grid.Column="0" Grid.Row="0" Margin="20,20,0,10" Style="{StaticResource textBlocks}"/>
-        <TextBlock x:Name="txtBlockUserID" Text="ID : " Grid.Column="0" Grid.Row="1" Margin="20,10,0,10" Style="{StaticResource textBlocks}"/>
+        <TextBlock  Text="Name : " Grid.Column="0" Grid.Row="0" Margin="20,20,0,10" Style="{StaticResource textBlocks}"/>
+        <TextBlock x:Name="txtBlockUserName" Grid.Column="1" Grid.Row="0" Margin="20,20,0,10" Style="{StaticResource textBlocks}"/>
+
+        <TextBlock  Text="ID : " Grid.Column="0" Grid.Row="1" Margin="20,10,0,10" Style="{StaticResource textBlocks}"/>
+        <TextBlock x:Name="txtBlockUserID"  Grid.Column="1" Grid.Row="1" Margin="20,10,0,10" Style="{StaticResource textBlocks}"/>
+
         <TextBlock Text="Balance" Grid.Column="0" Grid.Row="2" Margin="20,10,10,10" Style="{StaticResource textBlocks}"/>
         <TextBox x:Name="txtBalance" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBoxes}" Margin="10,0,20,0"/>
         <TextBlock Text="Amount" Grid.Column="0" Grid.Row="3" Margin="20,10,10,10" Style="{StaticResource textBlocks}"/>

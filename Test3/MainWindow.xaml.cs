@@ -39,6 +39,8 @@ namespace Test3
             txtBalance.Text = string.Empty;
             btnWithdraw.IsEnabled = false;
             btnDeposit.IsEnabled = false;
+            txtBlockUserID.Text = string.Empty;
+            txtBlockUserName.Text = string.Empty;
             btnLog.Visibility = Visibility.Visible;
             btnLogOut.Visibility = Visibility.Hidden;
         }
